@@ -1,13 +1,13 @@
 // 使用public访问修饰符，这意味着这个类可以被任何其他类访问
-public class Character {
+public abstract class Character {
     // 这些是实例变量。每个Character对象都有自己的一份拷贝。
     // 它们使用private访问修饰符，这意味着只有Character类自己的方法可以直接访问它们。
     private String name; // 名字
     private int health; // 健康值
-    private int attackPower; // 攻击力
+    protected int attackPower; // 攻击力
 
     // 构造函数用于创建和初始化对象。
-    // 这是一个public的构造函数，这意味着任何其他类都可以创建一个Character对象。
+    // 这是一个public的构造函数，这意味着任何Character的子类都可以利用这个构造函数。
     public Character(String name, int health, int attackPower) {
         this.name = name;
         this.health = health;
@@ -22,7 +22,7 @@ public class Character {
     }
 
     // 这是另一个实例方法的例子。使用此方法，角色可以接受伤害，这会降低它们的健康值
-    private void receiveDamage(int damage) {
+    protected void receiveDamage(int damage) {
         this.health -= damage;
     }
 
