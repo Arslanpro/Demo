@@ -3,10 +3,10 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) {
         // 尝试创建一个Character对象。我们将它赋值给一个叫做monster的变量。
-//        Character monster = new Character("Chuchu", 100, 20);
+        Character monster = new Character("Chuchu", 100, 20);
 
-//        Hero link = new Hero("Link", 100, 20, 1);
-//        Hero zelda = new Hero("Zelda", 120, 30,1);
+        Hero link = new Hero("Link", 100, 20, 1);
+        Hero zelda = new Hero("Zelda", 120, 30,1);
 
         Monster monster = new Monster("Chuchu", 100, 20, "一枚金币");
 
